@@ -382,6 +382,7 @@ body {
     background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary), var(--color-pink));
     border-radius: 2px;
     z-index: 0;
+    opacity: 0.25;
 }
 
 .event-card {
@@ -420,7 +421,7 @@ body {
 }
 
 .event-card.featured {
-    background: linear-gradient(135deg, rgba(253, 203, 110, 0.1), rgba(225, 112, 85, 0.05));
+    background: #fffbf5;
     border: 3px solid var(--color-accent);
 }
 
