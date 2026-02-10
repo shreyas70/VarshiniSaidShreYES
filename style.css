@@ -35,36 +35,9 @@ body {
     overflow-x: hidden;
 }
 
-/* Version Switcher */
-.version-switcher {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
-    display: flex;
-    gap: 8px;
-}
 
-.version-btn {
-    padding: 8px 14px;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    font-family: var(--font-body);
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid var(--color-gold);
-    color: var(--color-gold);
-    backdrop-filter: blur(10px);
-}
+/* Version Switcher Styles Removed */
 
-.version-btn:hover,
-.version-btn.active {
-    background: var(--color-gold);
-    color: white;
-}
 
 /* Utilities */
 .container {
@@ -171,14 +144,23 @@ body {
 .hero-section {
     position: relative;
     min-height: 100vh;
-    /* Changed from height to min-height for safety */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    padding-top: 80px;
-    /* added spacing for fixed navbar */
+    padding-top: 0;
+}
+
+.hero-content {
+    padding: 0 20px;
+    max-width: 900px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    z-index: 2;
+    margin-top: -300px;
 }
 
 .hero-bg-container {
@@ -187,13 +169,31 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/images/hero-bg.png');
+    /* Default: Mobile (cpimage.png) */
+    background-image: url('assets/images/cpimage.png');
     background-size: cover;
-    background-position: center;
+    background-position: center 20%;
+    background-position-x: 80%;
+    /* Show lower part of image (couple) on mobile */
     background-repeat: no-repeat;
-    opacity: 0.8;
+    opacity: 0.6;
+    /* Lower opacity for cpimage */
     z-index: -2;
     mix-blend-mode: multiply;
+}
+
+@media(min-width: 769px) {
+    .hero-bg-container {
+        /* Desktop: Use canva.png */
+        background-image: url('assets/images/cpimage.png');
+        background-size: cover;
+        background-position: center;
+        background-position-y: 50%;
+        opacity: 0.5;
+        /* User had 0.3, maybe 0.5 is safer for lighter image? Sticking to user intent or safe middle */
+        mix-blend-mode: normal;
+        /* As per recent user edit */
+    }
 }
 
 /* Remove the pseudo-element pattern we tried before */
@@ -206,17 +206,6 @@ body {
    Let's stick to a clean, non-card hero content first. 
 */
 
-.hero-content {
-    padding: 0 20px;
-    max-width: 900px;
-    /* Removed card background and borders */
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    position: relative;
-    z-index: 2;
-    margin-top: 20px;
-}
 
 .pre-title {
     font-family: var(--font-body);
