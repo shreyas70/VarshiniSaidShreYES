@@ -1,3 +1,3 @@
 # Varshini & Shreyas Wedding Website
 
-🎊 **Live Site:** https://shreyas70.github.io/mywedding/
+🎊 **Live Site:** https://shreyas70.github.io/VarshiniSaidShreYES/
