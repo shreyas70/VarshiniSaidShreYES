@@ -536,6 +536,29 @@ body {
     border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
+.rsvp-section {
+    padding: 100px 0;
+    background-color: var(--color-bg);
+    text-align: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.rsvp-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.rsvp-iframe {
+    width: 100%;
+    max-width: 640px;
+    height: 1000px;
+    /* Taller to accommodate form */
+    border: none;
+    background: transparent;
+}
+
+
 .registry-btn {
     display: inline-block;
     margin-top: 30px;
